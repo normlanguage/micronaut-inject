@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "micronaut.inject",
-    version: 2,
+    version: 3,
     binding: jarBinding(
       target: mavenJar(
         group: "io.micronaut",
@@ -15,6 +15,7 @@ Module module() {
           members: [],
           overloads: [
             jarOverload(name: "run", parameterTypes: []),
+            jarOverload(name: "run", parameterTypes: ["java.util.Map", "java.lang.String[]"]),
             jarOverload(
               name: "run",
               parameterTypes: ["java.lang.Class", "java.lang.String[]"]
@@ -32,6 +33,7 @@ Module module() {
             jarOverload(name: "getBean", parameterTypes: ["java.lang.Class"])
           ]
         ),
+        jarType(name: "context.BeanContext", members: ["inject"]),
         jarType(name: "context.annotation.Bean", members: ["preDestroy", "typed"]),
         jarType(name: "context.annotation.Factory", members: []),
         jarType(name: "context.annotation.Prototype", members: []),
