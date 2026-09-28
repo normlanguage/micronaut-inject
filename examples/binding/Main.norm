@@ -1,0 +1,16 @@
+package binding
+
+import micronaut.inject.context.annotation.Prototype
+
+@Prototype()
+class GreetingService {
+  String greet(String name) {
+    return "Hello, " + name
+  }
+}
+
+Void main() {
+  require(condition: GreetingService.class.annotation<Prototype>() != null, message: "Prototype binding is missing")
+  require(condition: GreetingService().greet("Norm") == "Hello, Norm", message: "Greeting changed")
+  printLine("prototype")
+}
