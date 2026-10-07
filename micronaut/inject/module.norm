@@ -1,7 +1,9 @@
 Module module() {
   return module(
     name: "micronaut.inject",
-    version: 4,
+    version: 5,
+    exports: ["context.ApplicationContext", "context.BeanLocator", "context.BeanContext", "context.annotation.Bean", "context.annotation.Factory", "context.annotation.Prototype", "context.annotation.Context", "context.annotation.Primary", "context.annotation.Secondary", "context.annotation.Executable", "context.annotation.Replaces", "context.annotation.Requires", "context.annotation.ConfigurationProperties", "context.annotation.EachProperty", "context.annotation.Value", "context.annotation.Property", "context.annotation.ConfigurationInject"],
+    dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
     binding: jarBinding(
       target: mavenJar(
         group: "io.micronaut",
@@ -11,7 +13,7 @@ Module module() {
       ),
       api: [
         jarType(
-          name: "context.ApplicationContext",
+          name: "io.micronaut.context.ApplicationContext",
           members: [],
           overloads: [
             jarOverload(name: "run", parameterTypes: []),
@@ -27,27 +29,27 @@ Module module() {
           ]
         ),
         jarType(
-          name: "context.BeanLocator",
+          name: "io.micronaut.context.BeanLocator",
           members: [],
           overloads: [
             jarOverload(name: "getBean", parameterTypes: ["java.lang.Class"])
           ]
         ),
-        jarType(name: "context.BeanContext", members: ["inject"]),
-        jarType(name: "context.annotation.Bean", members: ["preDestroy", "typed"]),
-        jarType(name: "context.annotation.Factory", members: []),
-        jarType(name: "context.annotation.Prototype", members: []),
-        jarType(name: "context.annotation.Context", members: []),
-        jarType(name: "context.annotation.Primary", members: []),
-        jarType(name: "context.annotation.Secondary", members: []),
-        jarType(name: "context.annotation.Executable", members: ["processOnStartup"]),
-        jarType(name: "context.annotation.Replaces", members: ["named", "value"]),
-        jarType(name: "context.annotation.Requires", members: ["beans", "missing", "notEquals", "property", "value"]),
-        jarType(name: "context.annotation.ConfigurationProperties", members: ["cliPrefix", "excludes", "includes", "value"]),
-        jarType(name: "context.annotation.EachProperty", members: ["excludes", "includes", "list", "primary", "value"]),
-        jarType(name: "context.annotation.Value", members: ["value"]),
-        jarType(name: "context.annotation.Property", members: ["defaultValue", "name", "value"]),
-        jarType(name: "context.annotation.ConfigurationInject", members: ["value"])
+        jarType(name: "io.micronaut.context.BeanContext", members: ["inject"]),
+        jarType(name: "io.micronaut.context.annotation.Bean", members: ["preDestroy", "typed"]),
+        jarType(name: "io.micronaut.context.annotation.Factory", members: []),
+        jarType(name: "io.micronaut.context.annotation.Prototype", members: []),
+        jarType(name: "io.micronaut.context.annotation.Context", members: []),
+        jarType(name: "io.micronaut.context.annotation.Primary", members: []),
+        jarType(name: "io.micronaut.context.annotation.Secondary", members: []),
+        jarType(name: "io.micronaut.context.annotation.Executable", members: ["processOnStartup"]),
+        jarType(name: "io.micronaut.context.annotation.Replaces", members: ["named", "value"]),
+        jarType(name: "io.micronaut.context.annotation.Requires", members: ["beans", "missing", "notEquals", "property", "value"]),
+        jarType(name: "io.micronaut.context.annotation.ConfigurationProperties", members: ["cliPrefix", "excludes", "includes", "value"]),
+        jarType(name: "io.micronaut.context.annotation.EachProperty", members: ["excludes", "includes", "list", "primary", "value"]),
+        jarType(name: "io.micronaut.context.annotation.Value", members: ["value"]),
+        jarType(name: "io.micronaut.context.annotation.Property", members: ["defaultValue", "name", "value"]),
+        jarType(name: "io.micronaut.context.annotation.ConfigurationInject", members: ["value"])
       ]
     )
   )
