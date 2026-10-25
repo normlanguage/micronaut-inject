@@ -1,7 +1,7 @@
 Module module() {
   return module(
     name: "micronaut.inject",
-    version: 10,
+    version: 11,
     exports: ["JavaArrays", "context.ApplicationContext", "context.BeanLocator", "context.BeanContext", "context.annotation.Bean", "context.annotation.Factory", "context.annotation.Prototype", "context.annotation.Context", "context.annotation.Primary", "context.annotation.Secondary", "context.annotation.Executable", "context.annotation.Replaces", "context.annotation.Requires", "context.annotation.ConfigurationProperties", "context.annotation.EachProperty", "context.annotation.Value", "context.annotation.Property", "context.annotation.ConfigurationInject"],
     dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
     binding: jarBinding(
@@ -54,6 +54,7 @@ Module module() {
     )
   )
 }
+
 
 
 
