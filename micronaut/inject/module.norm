@@ -1,8 +1,8 @@
 Module module() {
   return module(
     name: "micronaut.inject",
-    version: 13,
-    exports: ["JavaArrays", "context.ApplicationContext", "context.BeanLocator", "context.BeanContext", "context.annotation.Bean", "context.annotation.Factory", "context.annotation.Prototype", "context.annotation.Context", "context.annotation.Primary", "context.annotation.Secondary", "context.annotation.Executable", "context.annotation.Replaces", "context.annotation.Requires", "context.annotation.ConfigurationProperties", "context.annotation.EachProperty", "context.annotation.Value", "context.annotation.Property", "context.annotation.ConfigurationInject", "context.annotation.AliasFor", "context.annotation.Type"],
+    version: 7,
+    exports: ["context.ApplicationContext", "context.BeanLocator", "context.BeanContext", "context.annotation.Bean", "context.annotation.Factory", "context.annotation.Prototype", "context.annotation.Context", "context.annotation.Primary", "context.annotation.Secondary", "context.annotation.Executable", "context.annotation.Replaces", "context.annotation.Requires", "context.annotation.ConfigurationProperties", "context.annotation.EachProperty", "context.annotation.Value", "context.annotation.Property", "context.annotation.ConfigurationInject"],
     dependencies: [dependency(repository: "norm", name: "java.base", version: 1)],
     binding: jarBinding(
       target: mavenJar(
@@ -49,18 +49,9 @@ Module module() {
         jarType(name: "io.micronaut.context.annotation.EachProperty", alias: "context.annotation.EachProperty", members: ["excludes", "includes", "list", "primary", "value"]),
         jarType(name: "io.micronaut.context.annotation.Value", alias: "context.annotation.Value", members: ["value"]),
         jarType(name: "io.micronaut.context.annotation.Property", alias: "context.annotation.Property", members: ["defaultValue", "name", "value"]),
-        jarType(name: "io.micronaut.context.annotation.ConfigurationInject", alias: "context.annotation.ConfigurationInject", members: ["value"]),
-        jarType(name: "io.micronaut.context.annotation.AliasFor", alias: "context.annotation.AliasFor", members: ["member", "annotation", "annotationName"]),
-        jarType(name: "io.micronaut.context.annotation.Type", alias: "context.annotation.Type", members: ["value"])
+        jarType(name: "io.micronaut.context.annotation.ConfigurationInject", alias: "context.annotation.ConfigurationInject", members: ["value"])
       ]
     )
   )
 }
-
-
-
-
-
-
-
 
