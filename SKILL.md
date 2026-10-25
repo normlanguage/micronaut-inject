@@ -1,6 +1,6 @@
 # micronaut.inject Skill
 
-Use this skill to work with Norm module `micronaut.inject` version 8. Use only declarations listed below.
+Use this skill to work with Norm module `micronaut.inject` version 12. Use only declarations listed below.
 
 ## `micronaut.inject`
 
@@ -303,6 +303,52 @@ Void close()
 ```
 
 Returns: `Void`
+
+## `micronaut.inject.context.annotation`
+
+Source: `context/annotation/AliasFor.norm`
+
+### `AliasFor`
+
+```norm
+annotation AliasFor implements FunctionTarget, RuntimeRetention, RepeatableAnnotation
+```
+
+#### `annotation`
+
+```norm
+Class<?> annotation
+```
+
+Type: `Class<?>`
+
+#### `annotationName`
+
+```norm
+String annotationName
+```
+
+Type: `String`
+
+#### `member`
+
+```norm
+String member
+```
+
+Type: `String`
+
+#### `AliasFor`
+
+```norm
+AliasFor(Class<?>? annotation, String? annotationName, String? member)
+```
+
+Parameters:
+
+- `annotation`: `Class<?>?`
+- `annotationName`: `String?`
+- `member`: `String?`
 
 ## `micronaut.inject.context.annotation`
 
@@ -712,6 +758,24 @@ Source: `context/annotation/Secondary.norm`
 ```norm
 annotation Secondary implements PackageTarget, TypeTarget, FieldTarget, ConstructorTarget, FunctionTarget, ParameterTarget, LocalTarget, RuntimeRetention
 ```
+
+## `micronaut.inject.context.annotation`
+
+Source: `context/annotation/Type.norm`
+
+### `Type`
+
+```norm
+annotation Type implements PackageTarget, TypeTarget, FieldTarget, ConstructorTarget, FunctionTarget, ParameterTarget, LocalTarget, RuntimeRetention
+```
+
+#### `value`
+
+```norm
+List<Class<?>> value
+```
+
+Type: `List<Class<?>>`
 
 ## `micronaut.inject.context.annotation`
 
