@@ -1,6 +1,6 @@
 # micronaut.inject Skill
 
-Use this skill to work with Norm module `micronaut.inject` version 7. Use only declarations listed below.
+Use this skill to work with Norm module `micronaut.inject` version 14. Use only declarations listed below.
 
 ## `micronaut.inject`
 
